@@ -1,0 +1,44 @@
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+@import '@fontsource/plus-jakarta-sans/800.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  /* Global keyboard focus indicator — components with their own
+     focus:ring styles (e.g. Field inputs) override this via utilities. */
+  :focus-visible {
+    outline: 2px solid #B04E33;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .label-caps {
+    @apply text-[11px] font-bold uppercase tracking-wider text-stone;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .page-pad { @apply px-4 md:px-8 lg:px-12; }
+  .safe-area-pb { padding-bottom: env(safe-area-inset-bottom, 0px); }
+}
