@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# didactic-sniffle
-N?A 
-=======
 # BUK Housing Platform
 
 A student housing platform for Bayero University Kano (BUK) students.
